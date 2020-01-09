@@ -62,5 +62,10 @@ namespace MediSoft
             this.Close();
             Application.Exit();
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
