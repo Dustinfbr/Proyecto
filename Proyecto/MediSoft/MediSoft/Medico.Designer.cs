@@ -56,6 +56,7 @@
             this.btnCrear.TabIndex = 1;
             this.btnCrear.Text = "Crear Historia Clínica";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.BtnCrear_Click);
             // 
             // btnModificar
             // 

@@ -7,7 +7,8 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-namespace DAOCapa
+namespace CapaDatos
+
 {
     public class ManejadorDB
     {

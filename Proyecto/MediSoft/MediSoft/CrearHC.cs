@@ -17,5 +17,11 @@ namespace MediSoft
             InitializeComponent();
         }
 
+        private void BtnReceta_Click(object sender, EventArgs e)
+        {
+            CrearRecetaMedica crearRecetaMedica = new CrearRecetaMedica();
+            crearRecetaMedica.Show();
+            this.Close();
+        }
     }
 }
