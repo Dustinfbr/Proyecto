@@ -348,9 +348,3 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-Proyecto/MediSoft/master/obj/Debug/netstandard2.0/master.assets.cache
-*.cache
-Proyecto/MediSoft/master/obj/master.csproj.nuget.dgspec.json
-Proyecto/MediSoft/master/obj/project.assets.json
-*.txt
-*.pdb
