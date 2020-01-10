@@ -61,7 +61,7 @@ namespace CapaNegocio
 
                 mDB.EjecutarProcedimiento("AgregarPaciente",lstparametros);
 
-                msj = lstparametros[6].valor.ToString();
+                msj = lstparametros[2].valor.ToString();
             }
             catch (Exception ex)
             {
