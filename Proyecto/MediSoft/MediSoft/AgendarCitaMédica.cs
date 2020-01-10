@@ -21,5 +21,12 @@ namespace MediSoft
         {
 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Admin_Cita_Medica admin_Cita_Medica = new Admin_Cita_Medica();
+            admin_Cita_Medica.Show();
+            this.Close();
+        }
     }
 }

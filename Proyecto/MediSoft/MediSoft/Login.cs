@@ -31,14 +31,14 @@ namespace MediSoft
             {
                 MessageBox.Show("Ingreso Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Medico medico = new Medico();
-                this.Close();
+                this.Hide();
                 medico.Show();
             }
             else if(txtUsuario.Text == "Karla" && txtContra.Text == "12345")
             {
                 MessageBox.Show("Ingreso Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Secretaria secre = new Secretaria();
-                this.Close();
+                this.Hide();
                 secre.Show();
             }
             else
@@ -66,6 +66,16 @@ namespace MediSoft
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContra_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

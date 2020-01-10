@@ -28,7 +28,6 @@
       },
       "CapaDatos/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
         "compile": {
           "bin/placeholder/CapaDatos.dll": {}
         },
@@ -196,6 +195,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Mabel\\.nuget\\packages\\": {}
+    "C:\\Users\\Jaime Ramìrez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -208,6 +208,14 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mabel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+      "projectUniqueName": "C:\\Users\\Jaime Ramìrez\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj",
+      "projectName": "master",
+      "projectPath": "C:\\Users\\Jaime Ramìrez\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj",
+      "packagesPath": "C:\\Users\\Jaime Ramìrez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jaime Ramìrez\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Jaime Ramìrez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -222,6 +230,8 @@
           "projectReferences": {
             "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj": {
               "projectPath": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj"
+            "C:\\Users\\Jaime Ramìrez\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj": {
+              "projectPath": "C:\\Users\\Jaime Ramìrez\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj"
             }
           }
         }
