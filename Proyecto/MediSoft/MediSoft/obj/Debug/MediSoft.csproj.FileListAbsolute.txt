@@ -68,5 +68,47 @@ C:\Users\dusti\source\repos\MediSoft\Proyecto\Proyecto\MediSoft\MediSoft\obj\Deb
 C:\Users\dusti\source\repos\MediSoft\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csproj.CopyComplete
 C:\Users\dusti\source\repos\MediSoft\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.exe
 C:\Users\dusti\source\repos\MediSoft\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.pdb
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\MediSoft.exe.config
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\MediSoft.exe
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\MediSoft.pdb
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\master.dll
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\master.pdb
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csprojAssemblyReference.cache
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Admin_Cita_Medica.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.AgendarCitaMédica.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.CrearHC.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.CrearRecetaMedica.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.EliminarHC.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Login.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Medico.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.ModificarCita.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Properties.Resources.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Secretaria.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.SignosVitales.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Visualizar_Agenda.resources
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csproj.GenerateResource.cache
+C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csproj.CopyComplete
 C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.exe
 C:\Users\Jaime Ramìrez\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.pdb
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csprojAssemblyReference.cache
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Admin_Cita_Medica.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.AgendarCitaMédica.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.CrearHC.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.CrearRecetaMedica.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.EliminarHC.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Login.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Medico.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.ModificarCita.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Properties.Resources.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Secretaria.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.SignosVitales.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.Visualizar_Agenda.resources
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csproj.GenerateResource.cache
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.exe
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.pdb
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\MediSoft.exe.config
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\MediSoft.exe
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\MediSoft.pdb
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\CapaNegocio.dll
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\bin\Debug\CapaNegocio.pdb
+C:\Users\Mabel\Documents\GitHub\Proyecto\Proyecto\MediSoft\MediSoft\obj\Debug\MediSoft.csproj.CopyComplete
