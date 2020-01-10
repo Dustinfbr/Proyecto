@@ -106,3 +106,26 @@ insert into RecetaMedica values (1)
 go
 insert into Medicamento values (1)
 go
+
+GO  
+CREATE PROCEDURE [dbo].[AgregarPaciente]
+	@Cedula					varchar(10),
+	@Nombres				varchar(30),
+	@Apellidos				varchar(30),
+	@Sexo					varchar(10),
+	@FechaNacimiento		date		,
+	@Edad					int,
+	@mensaje				varchar(100) OUTPUT
+AS   
+BEGIN
+    SET NOCOUNT ON;
+	INSERT INTO Paciente VALUES(@Cedula,@Nombres,@Apellidos,@Sexo,@FechaNacimiento,@Edad);
+	if @@ERROR = 0
+		set @mensaje = 'Hubo error insertando a la persona';
+	else
+		set @mensaje = @Nombres + @Apellidos + 'Fue insertado exitosamente';
+END
+GO 
+
+ 
+select * from Paciente

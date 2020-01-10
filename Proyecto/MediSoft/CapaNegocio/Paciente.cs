@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DAOCapa;
+using System.Data;
 
 namespace CapaNegocio
 {
     public class Paciente
     {
-        private int Id_Paciente { get; set; }
 	    private String Cedula { get; set; }
         private String Nombres { get; set; }
         private String Apellidos { get; set; }
@@ -14,16 +15,17 @@ namespace CapaNegocio
         private DateTime FechaNacimiento { get; set; }
         private int Edad { get; set; }
 
-        public Paciente(int Id, String CI, String Nom, String Apell, String Sex, 
-                        DateTime Fecha)
+        ManejadorDB mDB = new ManejadorDB();
+
+
+        public Paciente(String CI, String Nom, String Apell, String Sex, DateTime Fecha)
         {
-            this.Id_Paciente = Id;
             this.Cedula = CI;
             this.Nombres = Nom;
             this.Apellidos = Apell;
             this.Sexo = Sex;
-            this.FechaNacimiento = Fecha;
-            this.Edad = this.CalculoEdad(Fecha);
+            this.FechaNacimiento = Fecha.Date;
+            this.Edad = this.CalculoEdad(Fecha.Date);
         }
 
         public int CalculoEdad(DateTime fecha)
@@ -40,5 +42,34 @@ namespace CapaNegocio
             }
             return edad;
         }
+
+        public String AgregarPaciente()
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@Cedula", Cedula));
+                lstparametros.Add(new ParametrosDB("@Nombres", Nombres));
+                lstparametros.Add(new ParametrosDB("@Apellidos", Apellidos));
+                lstparametros.Add(new ParametrosDB("@Sexo", Sexo));
+                lstparametros.Add(new ParametrosDB("@FechaNacimiento", FechaNacimiento));
+                lstparametros.Add(new ParametrosDB("@Edad", Edad));
+                //parametros de salida
+                lstparametros.Add(new ParametrosDB("@mensaje", SqlDbType.VarChar, 100));
+
+                mDB.EjecutarProcedimiento("AgregarPaciente",lstparametros);
+
+                msj = lstparametros[6].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+
     }
 }

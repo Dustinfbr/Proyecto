@@ -28,5 +28,12 @@ namespace MediSoft
             admin_Cita_Medica.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CrearPaciente crearPaciente = new CrearPaciente();
+            this.Close();
+            crearPaciente.Show();
+        }
     }
 }

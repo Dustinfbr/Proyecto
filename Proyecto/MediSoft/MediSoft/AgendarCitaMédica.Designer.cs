@@ -30,15 +30,14 @@
         {
             this.lblagenda = new System.Windows.Forms.Label();
             this.lblMedisoft = new System.Windows.Forms.Label();
-            this.lblNombrePaciente = new System.Windows.Forms.Label();
             this.lblCedula = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblagenda
@@ -63,23 +62,14 @@
             this.lblMedisoft.TabIndex = 13;
             this.lblMedisoft.Text = "MEDISOFT";
             // 
-            // lblNombrePaciente
-            // 
-            this.lblNombrePaciente.AutoSize = true;
-            this.lblNombrePaciente.Location = new System.Drawing.Point(100, 121);
-            this.lblNombrePaciente.Name = "lblNombrePaciente";
-            this.lblNombrePaciente.Size = new System.Drawing.Size(117, 17);
-            this.lblNombrePaciente.TabIndex = 15;
-            this.lblNombrePaciente.Text = "Nombre Paciente";
-            // 
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(100, 167);
+            this.lblCedula.Location = new System.Drawing.Point(38, 134);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(52, 17);
+            this.lblCedula.Size = new System.Drawing.Size(145, 17);
             this.lblCedula.TabIndex = 16;
-            this.lblCedula.Text = "Cédula";
+            this.lblCedula.Text = "Busqueda por Cédula";
             this.lblCedula.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // monthCalendar1
@@ -89,17 +79,9 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 17;
             // 
-            // txtNombrePaciente
-            // 
-            this.txtNombrePaciente.Location = new System.Drawing.Point(288, 116);
-            this.txtNombrePaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombrePaciente.Name = "txtNombrePaciente";
-            this.txtNombrePaciente.Size = new System.Drawing.Size(311, 22);
-            this.txtNombrePaciente.TabIndex = 18;
-            // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(288, 167);
+            this.txtCedula.Location = new System.Drawing.Point(189, 131);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(311, 22);
@@ -145,20 +127,29 @@
             this.maskedTextBox1.TabIndex = 24;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(532, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Nuevo Paciente";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AgendarCitaMédica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 442);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.btnVerificar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblIngreso);
             this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.txtNombrePaciente);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.lblCedula);
-            this.Controls.Add(this.lblNombrePaciente);
             this.Controls.Add(this.lblagenda);
             this.Controls.Add(this.lblMedisoft);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -173,14 +164,13 @@
 
         private System.Windows.Forms.Label lblagenda;
         private System.Windows.Forms.Label lblMedisoft;
-        private System.Windows.Forms.Label lblNombrePaciente;
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.TextBox txtNombrePaciente;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
