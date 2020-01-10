@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediSoft", "MediSoft\MediSo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "master", "master\master.csproj", "{97F2C5C6-CD18-4EE2-8A4D-F1B738F1B0EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{117BA7BA-2BFF-467B-8249-3B28C2228308}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{F871F5A2-D1E7-4774-BEDC-13FB796F9776}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{97F2C5C6-CD18-4EE2-8A4D-F1B738F1B0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97F2C5C6-CD18-4EE2-8A4D-F1B738F1B0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97F2C5C6-CD18-4EE2-8A4D-F1B738F1B0EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{117BA7BA-2BFF-467B-8249-3B28C2228308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{117BA7BA-2BFF-467B-8249-3B28C2228308}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{117BA7BA-2BFF-467B-8249-3B28C2228308}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{117BA7BA-2BFF-467B-8249-3B28C2228308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F871F5A2-D1E7-4774-BEDC-13FB796F9776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F871F5A2-D1E7-4774-BEDC-13FB796F9776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F871F5A2-D1E7-4774-BEDC-13FB796F9776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F871F5A2-D1E7-4774-BEDC-13FB796F9776}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

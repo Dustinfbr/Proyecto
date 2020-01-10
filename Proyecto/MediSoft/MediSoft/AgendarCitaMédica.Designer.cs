@@ -45,9 +45,9 @@
             // 
             this.lblagenda.AutoSize = true;
             this.lblagenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblagenda.Location = new System.Drawing.Point(222, 104);
+            this.lblagenda.Location = new System.Drawing.Point(197, 83);
             this.lblagenda.Name = "lblagenda";
-            this.lblagenda.Size = new System.Drawing.Size(308, 29);
+            this.lblagenda.Size = new System.Drawing.Size(253, 25);
             this.lblagenda.TabIndex = 14;
             this.lblagenda.Text = "Agendación de Cita Médica";
             // 
@@ -57,92 +57,99 @@
             this.lblMedisoft.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblMedisoft.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblMedisoft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblMedisoft.Location = new System.Drawing.Point(287, 45);
+            this.lblMedisoft.Location = new System.Drawing.Point(255, 36);
             this.lblMedisoft.Name = "lblMedisoft";
-            this.lblMedisoft.Size = new System.Drawing.Size(181, 37);
+            this.lblMedisoft.Size = new System.Drawing.Size(155, 31);
             this.lblMedisoft.TabIndex = 13;
             this.lblMedisoft.Text = "MEDISOFT";
             // 
             // lblNombrePaciente
             // 
             this.lblNombrePaciente.AutoSize = true;
-            this.lblNombrePaciente.Location = new System.Drawing.Point(113, 151);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(100, 121);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
-            this.lblNombrePaciente.Size = new System.Drawing.Size(131, 20);
+            this.lblNombrePaciente.Size = new System.Drawing.Size(117, 17);
             this.lblNombrePaciente.TabIndex = 15;
             this.lblNombrePaciente.Text = "Nombre Paciente";
             // 
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(113, 209);
+            this.lblCedula.Location = new System.Drawing.Point(100, 167);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(59, 20);
+            this.lblCedula.Size = new System.Drawing.Size(52, 17);
             this.lblCedula.TabIndex = 16;
             this.lblCedula.Text = "Cédula";
             this.lblCedula.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(117, 266);
+            this.monthCalendar1.Location = new System.Drawing.Point(104, 213);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 17;
             // 
             // txtNombrePaciente
             // 
-            this.txtNombrePaciente.Location = new System.Drawing.Point(324, 145);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(288, 116);
+            this.txtNombrePaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombrePaciente.Name = "txtNombrePaciente";
-            this.txtNombrePaciente.Size = new System.Drawing.Size(349, 26);
+            this.txtNombrePaciente.Size = new System.Drawing.Size(311, 22);
             this.txtNombrePaciente.TabIndex = 18;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(324, 209);
+            this.txtCedula.Location = new System.Drawing.Point(288, 167);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(349, 26);
+            this.txtCedula.Size = new System.Drawing.Size(311, 22);
             this.txtCedula.TabIndex = 19;
             // 
             // lblIngreso
             // 
             this.lblIngreso.AutoSize = true;
-            this.lblIngreso.Location = new System.Drawing.Point(526, 296);
+            this.lblIngreso.Location = new System.Drawing.Point(468, 237);
             this.lblIngreso.Name = "lblIngreso";
-            this.lblIngreso.Size = new System.Drawing.Size(208, 20);
+            this.lblIngreso.Size = new System.Drawing.Size(187, 17);
             this.lblIngreso.TabIndex = 20;
             this.lblIngreso.Text = "Ingreso De Hora para Turno";
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(509, 445);
+            this.btnRegresar.Location = new System.Drawing.Point(452, 356);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(96, 41);
+            this.btnRegresar.Size = new System.Drawing.Size(85, 33);
             this.btnRegresar.TabIndex = 22;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnVerificar
             // 
-            this.btnVerificar.Location = new System.Drawing.Point(633, 445);
+            this.btnVerificar.Location = new System.Drawing.Point(563, 356);
+            this.btnVerificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(101, 41);
+            this.btnVerificar.Size = new System.Drawing.Size(90, 33);
             this.btnVerificar.TabIndex = 23;
             this.btnVerificar.Text = "Verificar";
             this.btnVerificar.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(599, 319);
+            this.maskedTextBox1.Location = new System.Drawing.Point(532, 255);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maskedTextBox1.Mask = "00:00";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(49, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(44, 22);
             this.maskedTextBox1.TabIndex = 24;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // AgendarCitaMédica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 553);
+            this.ClientSize = new System.Drawing.Size(742, 442);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.btnVerificar);
             this.Controls.Add(this.btnRegresar);
@@ -154,6 +161,7 @@
             this.Controls.Add(this.lblNombrePaciente);
             this.Controls.Add(this.lblagenda);
             this.Controls.Add(this.lblMedisoft);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AgendarCitaMédica";
             this.Text = "AgendarCitaMédica";
             this.ResumeLayout(false);
