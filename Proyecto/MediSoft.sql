@@ -175,44 +175,50 @@ go
 (
  @Id_Receta int,
  @Nombre varchar(10),
- @Dosis int
+ @Dosis varchar (400)
 )
 as
 begin
  insert into Medicamento values (@Id_Receta,@Nombre,@Dosis)
 end
 GO
+
 CREATE Procedure listarMed
 as
 begin
  select * from Medicamento
 end
-
 GO
+
 CREATE procedure eliminarMed
 (
 @Id_Receta int,
- @Nombre varchar(10),
- @Dosis int
+ @Nombre varchar(10)
 )
 as
 delete  from Medicamento
- where @Id_Receta = Id_Receta
- and @Nombre = Nombre
- and @Dosis = Dosis
+ where Id_Receta = @Id_Receta
+ and Nombre = @Nombre
 GO
 
-
+--select * from Medicamento
+--go
+--exec dbo.eliminarMed @Id_Receta=1,@Nombre= 'Medicina1'
+go 
 CREATE procedure actualizarMed
 (
 @Id_Receta int,
  @Nombre varchar(10),
- @Dosis int
+ @Dosis varchar(400)
 ) 
 as
 update Medicamento 
-set @Dosis = Dosis
-where @Id_Receta = Id_Receta
+set Dosis = @Dosis
+where Id_Receta = @Id_Receta and   Nombre = @Nombre
+GO
+
+--exec dbo.actualizarMed @Id_Receta = 1,@Nombre = 'Medicina3', @Dosis = '400gr'
+
 GO
 insert into Secretaria values ('Karla Robles','1718192021')
 go
