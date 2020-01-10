@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj": {}
+    "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj": {
+    "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj",
         "projectName": "CapaDatos",
-        "projectPath": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj",
-        "packagesPath": "C:\\Users\\dusti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\obj\\",
+        "projectPath": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj",
+        "packagesPath": "C:\\Users\\Mabel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dusti\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Mabel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,39 +46,44 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj": {
+    "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj",
+        "projectUniqueName": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj",
         "projectName": "master",
-        "projectPath": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj",
-        "packagesPath": "C:\\Users\\dusti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\master\\obj\\",
+        "projectPath": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\master.csproj",
+        "packagesPath": "C:\\Users\\Mabel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\master\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dusti\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Mabel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj": {
-                "projectPath": "C:\\Users\\dusti\\source\\repos\\MediSoft\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj"
+              "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj": {
+                "projectPath": "C:\\Users\\Mabel\\Documents\\GitHub\\Proyecto\\Proyecto\\MediSoft\\CapaDatos\\CapaDatos.csproj"
               }
             }
           }
@@ -101,10 +105,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
