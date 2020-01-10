@@ -71,5 +71,10 @@ namespace CapaNegocio
             return msj;
         }
 
+        public DataTable listarPacientes()
+        {
+            return mDB.registros("listarPacientes", null);
+        }
+        
     }
 }

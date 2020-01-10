@@ -1,18 +1,138 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DAOCapa;
+using System.Data;
 
 namespace CapaNegocio
 {
     public class HistoriaClinica
     {
-        private int Id_HistoriaClinica { get; set; }
-        private int Id_Paciente { get; set; }
-
-        public HistoriaClinica(int HC, int Id)
+        private String Alergias { get; set; }
+        private String Enfermedades { get; set; }
+        public HistoriaClinica(String Aler, String Enfe)
         {
-            this.Id_HistoriaClinica = HC;
-            this.Id_Paciente = Id;
+            this.Alergias = Aler;
+            this.Enfermedades = Enfe;
+        }
+        public HistoriaClinica() 
+        {
+            
+        }
+
+        ManejadorDB mDB = new ManejadorDB();
+        public String agregarHC(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CIPaciente", CI ));
+                lstparametros.Add(new ParametrosDB("@Alergia", Alergias));
+                lstparametros.Add(new ParametrosDB("@Enfermedades", Enfermedades));
+                //parametros de salida
+                mDB.EjecutarProcedimiento("agregarHC", lstparametros);
+
+                msj = lstparametros[2].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+
+        public String modificarHC(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CIPaciente", CI));
+                lstparametros.Add(new ParametrosDB("@Alergia", Alergias));
+                lstparametros.Add(new ParametrosDB("@Enfermedades", Enfermedades));
+                //parametros de salida
+                mDB.EjecutarProcedimiento("modificarHC", lstparametros);
+
+                msj = lstparametros[2].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+        public String MostrarA(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+                //parametros de salida
+                lstparametros.Add(new ParametrosDB("@Alergia", SqlDbType.VarChar, 100));
+                mDB.EjecutarProcedimiento("MostrarA", lstparametros);
+
+                msj = lstparametros[1].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+        public String MostrarE(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+                //parametros de salida
+                lstparametros.Add(new ParametrosDB("@Enfermedades", SqlDbType.VarChar, 300));
+                mDB.EjecutarProcedimiento("MostrarE", lstparametros);
+
+                msj = lstparametros[1].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+
+        public DataTable listarHC()
+        {
+            return mDB.registros("listarHC", null);
+        }
+
+        public String eliminarHC(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+                //parametros de salida
+                mDB.EjecutarProcedimiento("eliminarHC", lstparametros);
+
+                msj = lstparametros[1].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
         }
     }
 }

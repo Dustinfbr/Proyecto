@@ -23,11 +23,25 @@ namespace MediSoft
             Application.Exit();
         }
 
-        private void BtnCrear_Click(object sender, EventArgs e)
+        private void btnCrear_Click(object sender, EventArgs e)
         {
             CrearHC crearHC = new CrearHC();
             crearHC.Show();
             this.Close();
         }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarHC ModHC = new ModificarHC();
+            ModHC.Show();
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarHC EliminarHC = new EliminarHC();
+            EliminarHC.Show();
+            this.Close();
+        }
+
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace MediSoft
 {
@@ -15,6 +16,12 @@ namespace MediSoft
         public EliminarHC()
         {
             InitializeComponent();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            HistoriaClinica historiaClinica = new HistoriaClinica();
+            
         }
     }
 }

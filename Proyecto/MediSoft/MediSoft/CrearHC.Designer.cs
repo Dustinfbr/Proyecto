@@ -42,13 +42,16 @@
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.RtxtAlergias = new System.Windows.Forms.RichTextBox();
             this.RtxtEnfermedades = new System.Windows.Forms.RichTextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.lblIngreso = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAdmin.Location = new System.Drawing.Point(169, 56);
+            this.lblAdmin.Location = new System.Drawing.Point(174, 44);
             this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(156, 20);
@@ -71,7 +74,7 @@
             // lblNombrePaciente
             // 
             this.lblNombrePaciente.AutoSize = true;
-            this.lblNombrePaciente.Location = new System.Drawing.Point(31, 92);
+            this.lblNombrePaciente.Location = new System.Drawing.Point(33, 128);
             this.lblNombrePaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
             this.lblNombrePaciente.Size = new System.Drawing.Size(89, 13);
@@ -81,7 +84,7 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(31, 112);
+            this.lblCedula.Location = new System.Drawing.Point(33, 148);
             this.lblCedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(40, 13);
@@ -92,7 +95,7 @@
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Location = new System.Drawing.Point(133, 92);
+            this.lblPaciente.Location = new System.Drawing.Point(135, 128);
             this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.Size = new System.Drawing.Size(102, 13);
@@ -102,7 +105,7 @@
             // lblCI
             // 
             this.lblCI.AutoSize = true;
-            this.lblCI.Location = new System.Drawing.Point(133, 112);
+            this.lblCI.Location = new System.Drawing.Point(135, 148);
             this.lblCI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCI.Name = "lblCI";
             this.lblCI.Size = new System.Drawing.Size(70, 13);
@@ -112,7 +115,7 @@
             // lblAlergias
             // 
             this.lblAlergias.AutoSize = true;
-            this.lblAlergias.Location = new System.Drawing.Point(31, 162);
+            this.lblAlergias.Location = new System.Drawing.Point(30, 196);
             this.lblAlergias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAlergias.Name = "lblAlergias";
             this.lblAlergias.Size = new System.Drawing.Size(44, 13);
@@ -123,7 +126,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(31, 135);
+            this.lblFecha.Location = new System.Drawing.Point(33, 171);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(90, 13);
@@ -134,7 +137,7 @@
             // lblEnfermedades
             // 
             this.lblEnfermedades.AutoSize = true;
-            this.lblEnfermedades.Location = new System.Drawing.Point(31, 266);
+            this.lblEnfermedades.Location = new System.Drawing.Point(30, 300);
             this.lblEnfermedades.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnfermedades.Name = "lblEnfermedades";
             this.lblEnfermedades.Size = new System.Drawing.Size(145, 13);
@@ -180,28 +183,30 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(363, 392);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(363, 407);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(71, 23);
             this.btnGuardar.TabIndex = 34;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(438, 392);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Location = new System.Drawing.Point(438, 407);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(71, 23);
             this.btnRegresar.TabIndex = 35;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // lblFechaNac
             // 
             this.lblFechaNac.AutoSize = true;
-            this.lblFechaNac.Location = new System.Drawing.Point(133, 135);
+            this.lblFechaNac.Location = new System.Drawing.Point(135, 171);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(70, 13);
@@ -210,7 +215,7 @@
             // 
             // RtxtAlergias
             // 
-            this.RtxtAlergias.Location = new System.Drawing.Point(35, 182);
+            this.RtxtAlergias.Location = new System.Drawing.Point(34, 216);
             this.RtxtAlergias.Name = "RtxtAlergias";
             this.RtxtAlergias.Size = new System.Drawing.Size(460, 81);
             this.RtxtAlergias.TabIndex = 37;
@@ -218,17 +223,47 @@
             // 
             // RtxtEnfermedades
             // 
-            this.RtxtEnfermedades.Location = new System.Drawing.Point(35, 282);
+            this.RtxtEnfermedades.Location = new System.Drawing.Point(34, 316);
             this.RtxtEnfermedades.Name = "RtxtEnfermedades";
             this.RtxtEnfermedades.Size = new System.Drawing.Size(460, 86);
             this.RtxtEnfermedades.TabIndex = 38;
             this.RtxtEnfermedades.Text = "";
             // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(187, 89);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(160, 20);
+            this.txtCedula.TabIndex = 39;
+            // 
+            // lblIngreso
+            // 
+            this.lblIngreso.AutoSize = true;
+            this.lblIngreso.Location = new System.Drawing.Point(33, 92);
+            this.lblIngreso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngreso.Name = "lblIngreso";
+            this.lblIngreso.Size = new System.Drawing.Size(149, 13);
+            this.lblIngreso.TabIndex = 40;
+            this.lblIngreso.Text = "Ingrese la Cédula de Paciente";
+            this.lblIngreso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(393, 87);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(86, 22);
+            this.btnBuscar.TabIndex = 41;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // CrearHC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 426);
+            this.ClientSize = new System.Drawing.Size(520, 441);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.lblIngreso);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.RtxtEnfermedades);
             this.Controls.Add(this.RtxtAlergias);
             this.Controls.Add(this.lblFechaNac);
@@ -243,7 +278,7 @@
             this.Controls.Add(this.lblNombrePaciente);
             this.Controls.Add(this.lblAdmin);
             this.Controls.Add(this.lblMedisoft);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearHC";
             this.Text = "CrearHC";
             this.ResumeLayout(false);
@@ -267,5 +302,8 @@
         private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.RichTextBox RtxtAlergias;
         private System.Windows.Forms.RichTextBox RtxtEnfermedades;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label lblIngreso;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
