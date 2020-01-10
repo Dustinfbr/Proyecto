@@ -22,5 +22,12 @@ namespace MediSoft
             this.Close();
             Application.Exit();
         }
+
+        private void BtnCrear_Click(object sender, EventArgs e)
+        {
+            CrearHC crearHC = new CrearHC();
+            crearHC.Show();
+            this.Close();
+        }
     }
 }

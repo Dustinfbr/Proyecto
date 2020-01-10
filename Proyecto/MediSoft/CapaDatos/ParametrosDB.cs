@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace DAOCapa
+namespace CapaDatos
+
 {
     public class ParametrosDB
     {

@@ -231,6 +231,7 @@
             this.btnReceta.TabIndex = 33;
             this.btnReceta.Text = "Crear Receta Medica";
             this.btnReceta.UseVisualStyleBackColor = true;
+            this.btnReceta.Click += new System.EventHandler(this.BtnReceta_Click);
             // 
             // btnGuardar
             // 

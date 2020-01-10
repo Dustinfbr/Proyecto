@@ -7,13 +7,14 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-namespace DAOCapa
+namespace CapaDatos
+
 {
     public class ManejadorDB
     {
         // Se escribe la variable de conexión.
         // Metodo para abrir la conexión
-         protected SqlConnection Conexion = new SqlConnection("Server=DESKTOP-SB5KK63\\SQLEXPRESS.;Database=MediSoft;Integrated Security=True");
+         protected SqlConnection Conexion = new SqlConnection("server=LAPTOP-R7N5M7F1\\SQLEXPRESS;Database=MediSoft;Integrated Security=True");
     //   protected SqlConnection Conexion = new SqlConnection("server=localhost;user id = root; database=itir554");
      
         //Servidor: 1-17-6-FCEC3-00\SQLEXPRESS 
