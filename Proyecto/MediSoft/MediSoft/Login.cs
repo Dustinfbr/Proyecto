@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CapaNegocio;
+using System;
 using System.Windows.Forms;
-using master;
-
 namespace MediSoft
 {
     public partial class Login : Form
@@ -27,14 +19,14 @@ namespace MediSoft
         public void VerificarUsuario()
         {
 
-            if ( txtUsuario.Text == "Ramiro" && txtContra.Text == "12345")
+            if (txtUsuario.Text == "Ramiro" && txtContra.Text == "12345")
             {
                 MessageBox.Show("Ingreso Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Medico medico = new Medico();
                 this.Hide();
                 medico.Show();
             }
-            else if(txtUsuario.Text == "Karla" && txtContra.Text == "12345")
+            else if (txtUsuario.Text == "Karla" && txtContra.Text == "12345")
             {
                 MessageBox.Show("Ingreso Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Secretaria secre = new Secretaria();
@@ -75,7 +67,7 @@ namespace MediSoft
 
         private void txtContra_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

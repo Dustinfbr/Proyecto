@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace master
+namespace CapaNegocio
 {
-    class Diagnostico
+    public class Diagnostico
     {
         private int Id_Diagnostico { get; set; }
 	    private int Id_CitaMedica { get; set; }
