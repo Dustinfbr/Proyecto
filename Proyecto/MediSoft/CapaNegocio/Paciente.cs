@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DAOCapa;
+using CapaDatos;
 using System.Data;
 
 namespace CapaNegocio

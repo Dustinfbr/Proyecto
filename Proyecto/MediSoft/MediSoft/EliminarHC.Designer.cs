@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
+            this.txtCI = new System.Windows.Forms.TextBox();
             this.lblnp = new System.Windows.Forms.Label();
             this.lblEliminar = new System.Windows.Forms.Label();
             this.lblMedisoft = new System.Windows.Forms.Label();
@@ -39,13 +39,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtNombrePaciente
+            // txtCI
             // 
-            this.txtNombrePaciente.Location = new System.Drawing.Point(151, 122);
-            this.txtNombrePaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNombrePaciente.Name = "txtNombrePaciente";
-            this.txtNombrePaciente.Size = new System.Drawing.Size(234, 20);
-            this.txtNombrePaciente.TabIndex = 22;
+            this.txtCI.Location = new System.Drawing.Point(151, 122);
+            this.txtCI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCI.Name = "txtCI";
+            this.txtCI.Size = new System.Drawing.Size(234, 20);
+            this.txtCI.TabIndex = 22;
             // 
             // lblnp
             // 
@@ -85,7 +85,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(75, 155);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -96,17 +96,18 @@
             // 
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEliminar.Location = new System.Drawing.Point(313, 315);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(60, 21);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnRegresar
             // 
             this.btnRegresar.Location = new System.Drawing.Point(151, 315);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(60, 21);
             this.btnRegresar.TabIndex = 25;
@@ -132,11 +133,11 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtNombrePaciente);
+            this.Controls.Add(this.txtCI);
             this.Controls.Add(this.lblnp);
             this.Controls.Add(this.lblEliminar);
             this.Controls.Add(this.lblMedisoft);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EliminarHC";
             this.Text = "EliminarHC";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -147,7 +148,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNombrePaciente;
+        private System.Windows.Forms.TextBox txtCI;
         private System.Windows.Forms.Label lblnp;
         private System.Windows.Forms.Label lblEliminar;
         private System.Windows.Forms.Label lblMedisoft;

@@ -98,18 +98,29 @@ end
 --Eliminar HC
 go
 create proc eliminarHC(
-@CIPaciente		varchar(10)
+@CI	varchar(10)
 )as
 begin
 	declare @Paciente int;
-	select @Paciente = Id_Paciente from Paciente where Cedula = @CIPaciente;
+	select @Paciente = Id_Paciente from Paciente where Cedula = @CI;
 	delete HistoriaClinica where Id_Paciente = @Paciente;
+	
 end
 go
 CREATE Procedure listarHC
 as
 begin
  select * from HistoriaClinica;
+end
+go
+CREATE Procedure buscarHC(
+@CI varchar(10)
+)
+as
+begin
+	declare @Paciente int;
+	select @Paciente = Id_Paciente from Paciente where Cedula = @CI;
+	select * from HistoriaClinica where Id_Paciente = @Paciente;
 end
 select * from HistoriaClinica;
 go
@@ -122,7 +133,7 @@ create table CitaMedica(
 	constraint PK_CM primary key (Id_CitaMedica),
 	constraint FK_CMDoc foreign key (Id_Doctor) references Doctor(Id_Doctor),
 	constraint FK_CMSc foreign key (Id_Secretaria) references Secretaria(Id_Secretaria),
-	constraint FK_HCCM foreign key (Id_HC) references HistoriaClinica(Id_HistoriaClinica)
+	--constraint FK_HCCM foreign key (Id_HC) references HistoriaClinica(Id_HistoriaClinica)
 )
 go
 create table Diagnostico(
@@ -263,3 +274,5 @@ begin
 end
  
 select * from Paciente
+select * from HistoriaClinica;
+select * from med;

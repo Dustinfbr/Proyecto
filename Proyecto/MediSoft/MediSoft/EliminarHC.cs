@@ -21,7 +21,15 @@ namespace MediSoft
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             HistoriaClinica historiaClinica = new HistoriaClinica();
+            dataGridView1.DataSource = historiaClinica.buscarHC(txtCI.Text);
             
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            HistoriaClinica historiaClinica = new HistoriaClinica();
+            historiaClinica.eliminarHC(txtCI.Text);
+            dataGridView1.DataSource = historiaClinica.listarHC();
         }
     }
 }

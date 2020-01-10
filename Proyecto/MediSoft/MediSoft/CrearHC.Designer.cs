@@ -45,6 +45,7 @@
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnCrearRM = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdmin
@@ -145,42 +146,6 @@
             this.lblEnfermedades.Text = "Enfermedades Pre-Existentes";
             this.lblEnfermedades.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 574);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Diagnostico";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(51, 607);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(673, 96);
-            this.richTextBox1.TabIndex = 31;
-            this.richTextBox1.Text = "";
-            // 
-            // btnSignosVitales
-            // 
-            this.btnSignosVitales.Location = new System.Drawing.Point(539, 565);
-            this.btnSignosVitales.Name = "btnSignosVitales";
-            this.btnSignosVitales.Size = new System.Drawing.Size(185, 36);
-            this.btnSignosVitales.TabIndex = 32;
-            this.btnSignosVitales.Text = "Ingresar Signos Vitales";
-            this.btnSignosVitales.UseVisualStyleBackColor = true;
-            // 
-            // btnReceta
-            // 
-            this.btnReceta.Location = new System.Drawing.Point(321, 725);
-            this.btnReceta.Name = "btnReceta";
-            this.btnReceta.Size = new System.Drawing.Size(183, 36);
-            this.btnReceta.TabIndex = 33;
-            this.btnReceta.Text = "Crear Receta Medica";
-            this.btnReceta.UseVisualStyleBackColor = true;
-            this.btnReceta.Click += new System.EventHandler(this.BtnReceta_Click);
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(363, 407);
@@ -256,11 +221,22 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // btnCrearRM
+            // 
+            this.btnCrearRM.Location = new System.Drawing.Point(238, 407);
+            this.btnCrearRM.Name = "btnCrearRM";
+            this.btnCrearRM.Size = new System.Drawing.Size(120, 23);
+            this.btnCrearRM.TabIndex = 42;
+            this.btnCrearRM.Text = "Crear Receta Medica";
+            this.btnCrearRM.UseVisualStyleBackColor = true;
+            this.btnCrearRM.Click += new System.EventHandler(this.btnCrearRM_Click);
+            // 
             // CrearHC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 441);
+            this.Controls.Add(this.btnCrearRM);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblIngreso);
             this.Controls.Add(this.txtCedula);
@@ -305,5 +281,6 @@
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnCrearRM;
     }
 }

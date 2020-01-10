@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DAOCapa;
+using CapaDatos;
 using System.Data;
 
 namespace CapaNegocio
@@ -112,6 +112,22 @@ namespace CapaNegocio
         public DataTable listarHC()
         {
             return mDB.registros("listarHC", null);
+        }
+
+        public DataTable buscarHC(String CI)
+        {
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return mDB.registros("buscarHC", lstparametros);
+
         }
 
         public String eliminarHC(String CI)
