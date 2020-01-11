@@ -354,3 +354,4 @@ Proyecto/MediSoft/master/obj/master.csproj.nuget.dgspec.json
 Proyecto/MediSoft/master/obj/project.assets.json
 *.txt
 *.pdb
+*.cache
