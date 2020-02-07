@@ -52,7 +52,7 @@
             // btnCrear
             // 
             this.btnCrear.Location = new System.Drawing.Point(89, 148);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(88, 46);
             this.btnCrear.TabIndex = 1;
@@ -63,7 +63,7 @@
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(212, 148);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(88, 46);
             this.btnModificar.TabIndex = 2;
@@ -74,7 +74,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(333, 148);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(85, 46);
             this.btnEliminar.TabIndex = 3;
@@ -85,7 +85,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(468, 261);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 23);
             this.btnSalir.TabIndex = 4;
@@ -115,9 +115,10 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.lblMedisoft);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Medico";
             this.Text = "Medico";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Medico_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

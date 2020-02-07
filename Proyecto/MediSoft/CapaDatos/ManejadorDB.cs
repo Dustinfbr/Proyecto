@@ -10,13 +10,29 @@ using System.Data;
 namespace CapaDatos
 
 {
-    public class ManejadorDB
+    public sealed class ManejadorDB
     {
+        public readonly static ManejadorDB Nuevo = new ManejadorDB();
+
+        public ManejadorDB()
+        {
+        }
+
+        public static ManejadorDB Instancia
+        {
+            get
+            {
+                return Nuevo;
+            }
+        }
+
+
+
         // Se escribe la variable de conexión.
         // Metodo para abrir la conexión
-         protected SqlConnection Conexion = new SqlConnection("Server=MABEL-HP\\SQLEXPRESS;Database=MediSoft;Integrated Security=True");
-    //   protected SqlConnection Conexion = new SqlConnection("server=localhost;user id = root; database=itir554");
-     
+        protected SqlConnection Conexion = new SqlConnection("Server=MABEL-HP\\SQLEXPRESS;Database=MediSoft;Integrated Security=True");
+        //   protected SqlConnection Conexion = new SqlConnection("server=localhost;user id = root; database=itir554");
+
         //Servidor: 1-17-6-FCEC3-00\SQLEXPRESS 
 
         // Metodo para abrir la conexión
@@ -79,12 +95,14 @@ namespace CapaDatos
             DataTable dt = new DataTable();
             SqlDataAdapter sqlda;
 
-            try {
+            try
+            {
 
                 sqlda = new SqlDataAdapter(_nombreproc, Conexion);
                 sqlda.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-                if (_lstParametros != null) {
+                if (_lstParametros != null)
+                {
                     for (int i = 0; i < _lstParametros.Count; i++)
                     {
                         sqlda.SelectCommand.Parameters.AddWithValue(_lstParametros[i].nombre, _lstParametros[i].valor);
@@ -101,4 +119,9 @@ namespace CapaDatos
         }
 
     }
+
+
+
+
+
 }

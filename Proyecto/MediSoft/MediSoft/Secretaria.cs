@@ -20,14 +20,19 @@ namespace MediSoft
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
         }
 
         private void BtnAdmHC_Click(object sender, EventArgs e)
         {
             Admin_Cita_Medica admin_Cita_Medica = new Admin_Cita_Medica();
             admin_Cita_Medica.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void Secretaria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
         }
     }
 }

@@ -10,12 +10,6 @@ namespace MediSoft
         {
             InitializeComponent();
         }
-
-        private void TxtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public void VerificarUsuario()
         {
 
@@ -62,12 +56,28 @@ namespace MediSoft
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+       
         }
 
         private void txtContra_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                VerificarUsuario();
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                VerificarUsuario();
+            }
         }
     }
 }

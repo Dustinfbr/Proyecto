@@ -20,28 +20,32 @@ namespace MediSoft
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
             CrearHC crearHC = new CrearHC();
             crearHC.Show();
-            this.Close();
+            this.Hide();
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
             ModificarHC ModHC = new ModificarHC();
             ModHC.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EliminarHC EliminarHC = new EliminarHC();
             EliminarHC.Show();
-            this.Close();
+            this.Hide();
         }
 
+        private void Medico_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

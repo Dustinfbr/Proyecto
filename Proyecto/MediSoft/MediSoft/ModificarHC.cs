@@ -30,5 +30,12 @@ namespace MediSoft
             HistoriaClinica historiaClinica = new HistoriaClinica(RtxtAlergias.Text, RtxtEnfermedades.Text);
             historiaClinica.modificarHC(txtCedula.Text);
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Medico medico = new Medico();
+            medico.Show();
+            this.Close();
+        }
     }
 }
