@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using CapaDatos;
+using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
+
+
     public class Medicamento
     {
        
+        
+
         private int Id_Receta { get; set; }
         private String Nombre { get; set; }
         private String Dosis { get; set; }
+
 
         ManejadorDB mDB = new ManejadorDB();
 
@@ -101,10 +107,10 @@ namespace CapaNegocio
         }
 
 
-
         public DataTable listaMedicinas()
         {
-            return mDB.registros("listarMed", null);
+            //return mDB.registros("listarMed", null);
+            return ManejadorDB.Instancia.registros("listarMed",null);
         }
     }
    
