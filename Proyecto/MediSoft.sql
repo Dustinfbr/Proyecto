@@ -33,6 +33,30 @@ create table Paciente(
 	constraint PK_Pc primary key  (Id_Paciente)
 )
 go
+--Procedimiento Obtener Datos del Paciente
+-- Obtener nombres y apellidos.
+create proc Nombres(
+@CI			varchar(10),
+@Nombres	varchar(60) output
+)as
+begin
+	declare @Paciente varchar(60);
+	select @Paciente = concat(Nombres,' ',Apellidos) from Paciente where Cedula = @CI; 
+	set @Nombres = @Paciente;
+end
+go
+--Obtener Fecha Nacimiento
+create proc Fecha(
+@CI		varchar(10),
+@Fecha	varchar(300) output
+)as
+begin
+	declare @Paciente varchar(30);
+	select @Paciente = FechaNacimiento from Paciente where Cedula = @CI; 
+	set @Fecha = @Paciente;
+end
+go
+
 create table HistoriaClinica (
    Id_HistoriaClinica       int identity(1,1)    not null,
    Id_Paciente				int					 not null,
@@ -46,7 +70,7 @@ go
 go
 create proc agregarHC(
 @CIPaciente		varchar(10),
-@Alergia		varchar(200),
+@Alergia		varchar(300),
 @Enfermedades	varchar(300)
 )as
 begin
@@ -139,9 +163,25 @@ go
 create table Diagnostico(
 	Id_Diagnostico			int identity(1,1)	not null,
 	Id_CitaMedica			int					not null,
+	Indicaciones			varchar(300)		not null,
 	constraint PK_Dg primary key  (Id_Diagnostico),
 	constraint FK_HC foreign key (Id_CitaMedica) references CitaMedica(Id_CitaMedica)
 )
+go
+--Insercion de un Diagnostico
+create proc agregarDiagnostico(
+@CI		varchar(10),
+@Indicaciones		varchar(300)
+)as
+begin
+	declare @Paciente int;
+	declare @Cita int;
+	declare @HC int;
+	select @Paciente = Id_Paciente from Paciente where Cedula = @CI;
+	select @HC = Id_HistoriaClinica from HistoriaClinica where Id_Paciente = @Paciente;
+	select @Cita = Id_CitaMedica from CitaMedica where Id_HC = @HC;
+	insert into Diagnostico values (@Cita,@Indicaciones);
+end
 go
 create table SignosVitales(
 	Id_SignoVital			int identity(1,1)		not null,
@@ -156,6 +196,27 @@ create table SignosVitales(
 	constraint PK_SV primary key  (Id_SignoVital),
 	constraint FK_SVCM foreign key (Id_CitaMedica) references CitaMedica(Id_CitaMedica)
 )
+go
+--Agregar Signos Vitales
+create proc agregarSignos(
+@CI		varchar(10),
+@Altura					float,					
+@Peso					float,				
+@Temperatura			float,
+@PresionA				float,					
+@PresionB				float,
+@RitmoCardiaco			float,					
+@Saturacion				float
+)as
+begin
+	declare @Paciente int;
+	declare @Cita int;
+	declare @HC int;
+	select @Paciente = Id_Paciente from Paciente where Cedula = @CI;
+	select @HC = Id_HistoriaClinica from HistoriaClinica where Id_Paciente = @Paciente;
+	select @Cita = Id_CitaMedica from CitaMedica where Id_HC = @HC;
+	insert into SignosVitales values (@Cita,@Altura,@Peso,@Temperatura,@PresionA,@PresionB,@Saturacion,@RitmoCardiaco);
+end
 go
 create table RecetaMedica(
 	Id_Receta				int identity(1,1)	not null,
@@ -230,24 +291,6 @@ GO
 
 --exec dbo.actualizarMed @Id_Receta = 1,@Nombre = 'Medicina3', @Dosis = '400gr'
 
-GO
-insert into Secretaria values ('Karla Robles','1718192021')
-go
-insert into Doctor values ('Ramiro Yanez','1718857326','Medico General')
-go
-insert into Paciente values ('1718657525','Pedro Pablo','Paramo Gutierrez','Masculino','1997-2-23',23)
-go
-insert into HistoriaClinica values (1,'polvo','diabetes')
-go
-insert into CitaMedica values (1,1,1,'2020-1-6')
-go
-insert into Diagnostico values (1)
-go
-insert into SignosVitales values (1,155,57.4,37,105,88,96,100)
-go
-insert into RecetaMedica values (1)
-go
-select * from Medicamento;
 GO  
 CREATE PROCEDURE [dbo].[AgregarPaciente]
 	@Cedula					varchar(10),
@@ -276,3 +319,22 @@ end
 select * from Paciente
 select * from HistoriaClinica;
 select * from med;
+
+GO
+insert into Secretaria values ('Karla Robles','1718192021')
+go
+insert into Doctor values ('Ramiro Yanez','1718857326','Medico General')
+go
+insert into Paciente values ('1718657525','Pedro Pablo','Paramo Gutierrez','Masculino','1997-2-23',23)
+go
+insert into HistoriaClinica values (1,'polvo','diabetes')
+go
+insert into CitaMedica values (1,1,1,'2020-1-6')
+go
+insert into Diagnostico values (1,'Excelete saud')
+go
+insert into RecetaMedica values (1)
+go
+select * from Medicamento;
+go
+insert into SignosVitales values (1,155,57.4,37,105,88,96,100)

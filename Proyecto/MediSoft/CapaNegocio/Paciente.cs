@@ -8,7 +8,7 @@ namespace CapaNegocio
 {
     public class Paciente
     {
-	    private String Cedula { get; set; }
+        private String Cedula { get; set; }
         private String Nombres { get; set; }
         private String Apellidos { get; set; }
         private String Sexo { get; set; }
@@ -17,6 +17,10 @@ namespace CapaNegocio
 
         ManejadorDB mDB = new ManejadorDB();
 
+        public Paciente()
+        {
+
+        }
 
         public Paciente(String CI, String Nom, String Apell, String Sex, DateTime Fecha)
         {
@@ -32,7 +36,7 @@ namespace CapaNegocio
         {
             int edad;
             DateTime hoy = DateTime.Today;
-            if(hoy.Month > fecha.Month)
+            if (hoy.Month > fecha.Month)
             {
                 edad = hoy.Year - fecha.Year - 1;
             }
@@ -59,7 +63,7 @@ namespace CapaNegocio
                 //parametros de salida
                 lstparametros.Add(new ParametrosDB("@mensaje", SqlDbType.VarChar, 100));
 
-                mDB.EjecutarProcedimiento("AgregarPaciente",lstparametros);
+                mDB.EjecutarProcedimiento("AgregarPaciente", lstparametros);
 
                 msj = lstparametros[2].valor.ToString();
             }
@@ -75,6 +79,71 @@ namespace CapaNegocio
         {
             return mDB.registros("listarPacientes", null);
         }
-        
+
+        public String ObtenerNombres(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+                //parametros de salida
+                lstparametros.Add(new ParametrosDB("@Nombres", SqlDbType.VarChar, 300));
+                mDB.EjecutarProcedimiento("Nombres", lstparametros);
+
+                msj = lstparametros[1].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+
+        public String ObtenerFecha(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+                //parametros de salida
+                lstparametros.Add(new ParametrosDB("@Fecha", SqlDbType.VarChar, 300));
+                mDB.EjecutarProcedimiento("Fecha", lstparametros);
+
+                msj = lstparametros[1].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
+
+        public String ObtenerD(String CI)
+        {
+            String msj = "";
+            List<ParametrosDB> lstparametros = new List<ParametrosDB>();
+            try
+            {
+                //parametros de entrada
+                lstparametros.Add(new ParametrosDB("@CI", CI));
+                //parametros de salida
+                lstparametros.Add(new ParametrosDB("@Indicaciones", SqlDbType.VarChar, 100));
+                mDB.EjecutarProcedimiento("MostrarD", lstparametros);
+
+                msj = lstparametros[1].valor.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return msj;
+        }
     }
 }

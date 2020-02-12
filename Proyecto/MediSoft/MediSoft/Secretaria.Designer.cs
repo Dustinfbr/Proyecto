@@ -49,7 +49,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(431, 245);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 23);
             this.btnSalir.TabIndex = 10;
@@ -60,7 +60,7 @@
             // btnAdmHC
             // 
             this.btnAdmHC.Location = new System.Drawing.Point(320, 131);
-            this.btnAdmHC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmHC.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmHC.Name = "btnAdmHC";
             this.btnAdmHC.Size = new System.Drawing.Size(88, 46);
             this.btnAdmHC.TabIndex = 8;
@@ -71,12 +71,13 @@
             // btnVisualizarAgenda
             // 
             this.btnVisualizarAgenda.Location = new System.Drawing.Point(115, 131);
-            this.btnVisualizarAgenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVisualizarAgenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnVisualizarAgenda.Name = "btnVisualizarAgenda";
             this.btnVisualizarAgenda.Size = new System.Drawing.Size(88, 46);
             this.btnVisualizarAgenda.TabIndex = 7;
             this.btnVisualizarAgenda.Text = "Visualizar Agenda";
             this.btnVisualizarAgenda.UseVisualStyleBackColor = true;
+            this.btnVisualizarAgenda.Click += new System.EventHandler(this.btnVisualizarAgenda_Click);
             // 
             // lblMedisoft
             // 
@@ -101,10 +102,9 @@
             this.Controls.Add(this.btnAdmHC);
             this.Controls.Add(this.btnVisualizarAgenda);
             this.Controls.Add(this.lblMedisoft);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Secretaria";
             this.Text = "Secretaria";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Secretaria_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

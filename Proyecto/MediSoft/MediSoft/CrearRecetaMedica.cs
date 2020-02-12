@@ -39,7 +39,7 @@ namespace MediSoft
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void Modificar_Click(object sender, EventArgs e)

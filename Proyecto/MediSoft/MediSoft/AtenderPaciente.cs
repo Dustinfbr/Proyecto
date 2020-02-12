@@ -11,9 +11,9 @@ using CapaNegocio;
 
 namespace MediSoft
 {
-    public partial class ModificarHC : Form
+    public partial class AtenderPaciente : Form
     {
-        public ModificarHC()
+        public AtenderPaciente()
         {
             InitializeComponent();
         }
@@ -21,7 +21,6 @@ namespace MediSoft
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Paciente paciente = new Paciente();
-            HistoriaClinica historiaClinica = new HistoriaClinica();
             if (String.IsNullOrEmpty(txtCedula.Text))
             {
                 Console.WriteLine("Error");
@@ -39,21 +38,7 @@ namespace MediSoft
                     lblPaciente.Text = (paciente.ObtenerNombres(txtCedula.Text));
                     lblCI.Text = txtCedula.Text;
                     lblFechaNac.Text = paciente.ObtenerFecha(txtCedula.Text);
-                    RtxtAlergias.Text = historiaClinica.MostrarA(txtCedula.Text);
-                    RtxtEnfermedades.Text = historiaClinica.MostrarE(txtCedula.Text);
                 }
-            }        
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            HistoriaClinica historiaClinica = new HistoriaClinica(RtxtAlergias.Text, RtxtEnfermedades.Text);
-            historiaClinica.modificarHC(txtCedula.Text);
-            u = 0;
-            DialogResult resultado = MessageBox.Show("Informacion Actualizada", "Mensaje", MessageBoxButtons.OK);
-            if (resultado == DialogResult.OK)
-            {
-                this.Close();
             }
         }
 
@@ -61,14 +46,14 @@ namespace MediSoft
         {
             if (u == 1)
             {
-                if (!String.IsNullOrEmpty(RtxtAlergias.Text) || !String.IsNullOrEmpty(RtxtEnfermedades.Text))
+                if (!String.IsNullOrEmpty(RtxtDiagnostico.Text))
                 {
                     DialogResult resultado = MessageBox.Show("Lo cambios no se han Guardado. ¿Desea Guardarlos?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (resultado == DialogResult.Yes)
                     {
-                        HistoriaClinica Hc = new HistoriaClinica(RtxtAlergias.Text, RtxtEnfermedades.Text);
-                        Hc.agregarHC(txtCedula.Text);
-                        MessageBox.Show("Informacion", "Mensaje", MessageBoxButtons.OK);
+                        Diagnostico Dg = new Diagnostico(RtxtDiagnostico.Text);
+                        Dg.AgregarDiagnostico(txtCedula.Text);
+                        MessageBox.Show("Informacion Guardada", "Mensaje", MessageBoxButtons.OK);
                         if (resultado == DialogResult.OK)
                         {
                             this.Close();
@@ -84,6 +69,34 @@ namespace MediSoft
                     this.Close();
                 }
             }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Diagnostico Dg = new Diagnostico(RtxtDiagnostico.Text);
+            Dg.AgregarDiagnostico(txtCedula.Text);
+            u = 0;
+            DialogResult resultado = MessageBox.Show("Informacion Guardada", "Mensaje", MessageBoxButtons.OK);
+            if (resultado == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnSignos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignosVitales signos = new SignosVitales(txtCedula.Text);
+            signos.ShowDialog();
+            this.Show();
+        }
+
+        private void btnReceta_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CrearRecetaMedica receta = new CrearRecetaMedica();
+            receta.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -20,14 +20,23 @@ namespace MediSoft
         private void BtnAgendar_Click(object sender, EventArgs e)
         {
             AgendarCitaMédica agendarCitaMédica = new AgendarCitaMédica();
-            agendarCitaMédica.Show();
-            this.Close();
+            this.Hide();
+            agendarCitaMédica.ShowDialog();
+            this.Show();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarCita cita = new ModificarCita();
+            this.Hide();
+            cita.ShowDialog();
+            this.Show();
+        }
+
     }
 }

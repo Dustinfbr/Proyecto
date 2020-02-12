@@ -58,6 +58,12 @@
     <Compile Include="AgendarCitaMédica.Designer.cs">
       <DependentUpon>AgendarCitaMédica.cs</DependentUpon>
     </Compile>
+    <Compile Include="AtenderPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtenderPaciente.Designer.cs">
+      <DependentUpon>AtenderPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearHC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgendarCitaMédica.resx">
       <DependentUpon>AgendarCitaMédica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtenderPaciente.resx">
+      <DependentUpon>AtenderPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearHC.resx">
       <DependentUpon>CrearHC.cs</DependentUpon>

@@ -17,23 +17,17 @@ namespace MediSoft
             InitializeComponent();
         }
 
-        private void TxtTurno_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Admin_Cita_Medica admin_Cita_Medica = new Admin_Cita_Medica();
-            admin_Cita_Medica.Show();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             CrearPaciente crearPaciente = new CrearPaciente();
-            this.Close();
-            crearPaciente.Show();
+            this.Hide();
+            crearPaciente.ShowDialog();
+            this.Show();
         }
     }
 }

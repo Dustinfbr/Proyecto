@@ -31,5 +31,10 @@ namespace MediSoft
             historiaClinica.eliminarHC(txtCI.Text);
             dataGridView1.DataSource = historiaClinica.listarHC();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

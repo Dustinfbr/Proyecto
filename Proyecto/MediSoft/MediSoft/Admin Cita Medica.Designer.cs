@@ -33,7 +33,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgendar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMedisoft
@@ -62,18 +61,19 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(218, 146);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Location = new System.Drawing.Point(322, 146);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(88, 46);
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar Cita Médica";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgendar
             // 
-            this.btnAgendar.Location = new System.Drawing.Point(62, 146);
-            this.btnAgendar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgendar.Location = new System.Drawing.Point(150, 146);
+            this.btnAgendar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.Size = new System.Drawing.Size(88, 46);
             this.btnAgendar.TabIndex = 13;
@@ -84,7 +84,7 @@
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(433, 242);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 23);
             this.btnSalir.TabIndex = 15;
@@ -92,27 +92,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(402, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 46);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Administrar Pacientes";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Admin_Cita_Medica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgendar);
             this.Controls.Add(this.lblsecre);
             this.Controls.Add(this.lblMedisoft);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Admin_Cita_Medica";
             this.Text = "Admin_Cita_Medica";
             this.ResumeLayout(false);
@@ -127,6 +117,5 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgendar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button button1;
     }
 }

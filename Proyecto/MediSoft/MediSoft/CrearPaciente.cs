@@ -20,13 +20,6 @@ namespace MediSoft
 
         String sexo = null;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AgendarCitaMédica agendarCitaMédica = new AgendarCitaMédica();
-            agendarCitaMédica.Show();
-            this.Close();
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -34,6 +27,7 @@ namespace MediSoft
             Console.WriteLine(paciente.AgregarPaciente());
             int anios = paciente.CalculoEdad(dateTimePicker1.Value);
             edad.Text = anios.ToString();
+            MessageBox.Show("Paciente Agregado", "Mensaje", MessageBoxButtons.OK);
         }
 
         
@@ -48,14 +42,9 @@ namespace MediSoft
             sexo = "Masculino";
         }
 
-        private void edad_TextChanged(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            
+            this.Close();
         }
     }
 }

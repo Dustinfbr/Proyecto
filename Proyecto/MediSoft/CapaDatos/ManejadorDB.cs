@@ -12,6 +12,7 @@ namespace CapaDatos
 {
     public sealed class ManejadorDB
     {
+        //Creacion del Patron de Diseño Singleton
         public readonly static ManejadorDB Nuevo = new ManejadorDB();
 
         public ManejadorDB()
@@ -25,13 +26,15 @@ namespace CapaDatos
                 return Nuevo;
             }
         }
-
+        //Fin Singleton
 
 
         // Se escribe la variable de conexión.
         // Metodo para abrir la conexión
-        protected SqlConnection Conexion = new SqlConnection("Server=MABEL-HP\\SQLEXPRESS;Database=MediSoft;Integrated Security=True");
-        //   protected SqlConnection Conexion = new SqlConnection("server=localhost;user id = root; database=itir554");
+#pragma warning disable CS0628 // Nuevo miembro protegido declarado en la clase sealed
+        protected SqlConnection Conexion = new SqlConnection("Server=MEILYN;Database=MediSoft;Integrated Security=True");
+#pragma warning restore CS0628 // Nuevo miembro protegido declarado en la clase sealed
+                              //   protected SqlConnection Conexion = new SqlConnection("server=localhost;user id = root; database=itir554");
 
         //Servidor: 1-17-6-FCEC3-00\SQLEXPRESS 
 

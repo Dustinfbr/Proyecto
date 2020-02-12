@@ -21,9 +21,8 @@ namespace CapaNegocio
         }
 
         ManejadorDB mDB = new ManejadorDB();
-        public String agregarHC(String CI)
+        public void agregarHC(String CI)
         {
-            String msj = "";
             List<ParametrosDB> lstparametros = new List<ParametrosDB>();
             try
             {
@@ -33,15 +32,11 @@ namespace CapaNegocio
                 lstparametros.Add(new ParametrosDB("@Enfermedades", Enfermedades));
                 //parametros de salida
                 mDB.EjecutarProcedimiento("agregarHC", lstparametros);
-
-                msj = lstparametros[2].valor.ToString();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
-            return msj;
         }
 
         public String modificarHC(String CI)

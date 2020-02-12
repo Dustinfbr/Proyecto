@@ -45,7 +45,6 @@
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnCrearRM = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdmin
@@ -99,9 +98,8 @@
             this.lblPaciente.Location = new System.Drawing.Point(135, 128);
             this.lblPaciente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(102, 13);
+            this.lblPaciente.Size = new System.Drawing.Size(0, 13);
             this.lblPaciente.TabIndex = 22;
-            this.lblPaciente.Text = "Nombres y Apellidos";
             // 
             // lblCI
             // 
@@ -109,9 +107,8 @@
             this.lblCI.Location = new System.Drawing.Point(135, 148);
             this.lblCI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCI.Name = "lblCI";
-            this.lblCI.Size = new System.Drawing.Size(70, 13);
+            this.lblCI.Size = new System.Drawing.Size(0, 13);
             this.lblCI.TabIndex = 23;
-            this.lblCI.Text = "XXXXXXXXX";
             // 
             // lblAlergias
             // 
@@ -174,9 +171,8 @@
             this.lblFechaNac.Location = new System.Drawing.Point(135, 171);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(70, 13);
+            this.lblFechaNac.Size = new System.Drawing.Size(0, 13);
             this.lblFechaNac.TabIndex = 36;
-            this.lblFechaNac.Text = "XXXXXXXXX";
             // 
             // RtxtAlergias
             // 
@@ -188,7 +184,7 @@
             // 
             // RtxtEnfermedades
             // 
-            this.RtxtEnfermedades.Location = new System.Drawing.Point(34, 316);
+            this.RtxtEnfermedades.Location = new System.Drawing.Point(33, 316);
             this.RtxtEnfermedades.Name = "RtxtEnfermedades";
             this.RtxtEnfermedades.Size = new System.Drawing.Size(460, 86);
             this.RtxtEnfermedades.TabIndex = 38;
@@ -220,23 +216,13 @@
             this.btnBuscar.TabIndex = 41;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnCrearRM
-            // 
-            this.btnCrearRM.Location = new System.Drawing.Point(238, 407);
-            this.btnCrearRM.Name = "btnCrearRM";
-            this.btnCrearRM.Size = new System.Drawing.Size(120, 23);
-            this.btnCrearRM.TabIndex = 42;
-            this.btnCrearRM.Text = "Crear Receta Medica";
-            this.btnCrearRM.UseVisualStyleBackColor = true;
-            this.btnCrearRM.Click += new System.EventHandler(this.btnCrearRM_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // CrearHC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 441);
-            this.Controls.Add(this.btnCrearRM);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblIngreso);
             this.Controls.Add(this.txtCedula);
@@ -256,7 +242,7 @@
             this.Controls.Add(this.lblMedisoft);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearHC";
-            this.Text = "CrearHC";
+            this.Text = "Medisoft";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +267,5 @@
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label lblIngreso;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnCrearRM;
     }
 }
